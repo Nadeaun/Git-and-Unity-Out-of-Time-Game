@@ -359,6 +359,7 @@ GameObject:
   - component: {fileID: 3159026589632670084}
   - component: {fileID: 8579884562255833732}
   - component: {fileID: 381622442003445730}
+  - component: {fileID: 5556183084747801003}
   m_Layer: 0
   m_Name: ClockMain
   m_TagString: Untagged
@@ -430,3 +431,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5556183084747801003
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6837518360816308155}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5588639844546702332, guid: 10288c9f0fa2cf54196c00f9b0fb24d3, type: 3}

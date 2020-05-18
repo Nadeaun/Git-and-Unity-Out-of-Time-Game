@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7688121231779003302}
   - component: {fileID: 6817386586225299802}
   - component: {fileID: 7669832642197059331}
+  - component: {fileID: 5260529694915168839}
   m_Layer: 0
   m_Name: Nightstand_body
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5260529694915168839
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142047498872214227}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4478108732508017155, guid: 1fabe9ee88525b24c8a9982e3c4599a1, type: 3}
 --- !u!1 &831161075586807509
 GameObject:
   m_ObjectHideFlags: 0

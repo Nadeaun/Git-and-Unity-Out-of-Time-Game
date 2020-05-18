@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3821589936276816220}
   - component: {fileID: 3427980477806312294}
   - component: {fileID: 8570003372828534519}
+  - component: {fileID: 6276329886863503465}
   m_Layer: 0
   m_Name: Bedframe
   m_TagString: Untagged
@@ -80,6 +81,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6276329886863503465
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881482629661500527}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3573550516947501702, guid: 8342bf34526180d4180da7e3d5671568, type: 3}
 --- !u!1 &2471882463550714655
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +296,7 @@ GameObject:
   - component: {fileID: 1877302973427499797}
   - component: {fileID: 5065084661976548665}
   - component: {fileID: 4213569202344359698}
+  - component: {fileID: 4140294375031061352}
   m_Layer: 0
   m_Name: matress
   m_TagString: Untagged
@@ -350,3 +366,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4140294375031061352
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7568149613732328609}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6101324636678443301, guid: 8342bf34526180d4180da7e3d5671568, type: 3}
