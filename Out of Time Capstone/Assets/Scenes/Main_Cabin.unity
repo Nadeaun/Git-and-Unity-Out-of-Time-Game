@@ -1801,7 +1801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 977033780}
-  speed: 12
+  speed: 5
   gravity: -9.81
   groundCheck: {fileID: 329447322}
   groundDistance: 0.4
