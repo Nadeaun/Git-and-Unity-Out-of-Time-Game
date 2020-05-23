@@ -6,7 +6,7 @@ public class PickUp : MonoBehaviour
 {
    
     public Transform theDestination;
-    public bool canPickUp;
+  
    
     // Update is called once per frame
     void FixedUpdate()
@@ -23,7 +23,7 @@ public class PickUp : MonoBehaviour
 
         }
 
-        if(Input.GetKeyUp(KeyCode.G))
+        if(Input.GetKeyUp(KeyCode.E))
         {
             this.transform.parent = null;
             GetComponent<Rigidbody>().useGravity = true;
