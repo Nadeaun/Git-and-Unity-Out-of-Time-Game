@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-
+   
     public Transform theDestination;
+    public bool canPickUp;
    
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+      
         if(Input.GetKeyDown(KeyCode.E))
         {
             GetComponent<BoxCollider>().enabled = false;
