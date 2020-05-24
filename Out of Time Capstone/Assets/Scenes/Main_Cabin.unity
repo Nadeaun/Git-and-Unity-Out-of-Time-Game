@@ -462,7 +462,7 @@ PrefabInstance:
     - target: {fileID: 7261043742214550529, guid: c2666bb2e2162a84aa36d3e4e28799ab,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.72
+      value: -12.73
       objectReference: {fileID: 0}
     - target: {fileID: 7261043742214550529, guid: c2666bb2e2162a84aa36d3e4e28799ab,
         type: 3}
@@ -2152,6 +2152,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 306855051}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &967993806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967993805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b238c7c9f0bacc54b953d92af3aeeb41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theDestination: {fileID: 1607472683}
+  theItem: {fileID: 967993805}
 --- !u!65 &967993807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2165,19 +2179,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.19, y: 0.08, z: 0.06}
   m_Center: {x: 0.07024253, y: -0.000000008334092, z: 0.0026482362}
---- !u!114 &967993808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967993805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b238c7c9f0bacc54b953d92af3aeeb41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theDestination: {fileID: 1607472683}
 --- !u!54 &967993809
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3182,19 +3183,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &1300324106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1300324100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b238c7c9f0bacc54b953d92af3aeeb41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theDestination: {fileID: 1607472683}
 --- !u!1001 &1312124209
 PrefabInstance:
   m_ObjectHideFlags: 0
