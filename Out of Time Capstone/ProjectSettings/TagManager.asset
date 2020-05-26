@@ -6,6 +6,7 @@ TagManager:
   tags:
   - JournalPage
   - Pendellum
+  - Item
   layers:
   - Default
   - TransparentFX
