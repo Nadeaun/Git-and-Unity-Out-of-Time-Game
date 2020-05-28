@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ItemPickUp : MonoBehaviour
 {
 
     
-
     public Transform hand;
     public GameObject item;
     public bool isHolding = false;
+    public bool lighterActive;
     //public GameObject mainCamera;
     /*
     private void Start()
@@ -20,29 +21,24 @@ public class ItemPickUp : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        // Check if player is already holding something in their hand (besides lighter)
         if (isHolding == false)
         {
+            lighterActive = false;
+
             if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("CLICK!");
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, 100))
                 {
-                    Debug.Log("hit!");
                     var pick_upable_object = hit.transform;
-                    Debug.Log(item.transform.position + ": Object transform position");
-                    Debug.Log(pick_upable_object + ": Hit transform position");
-                    Debug.Log(hand.transform.position + ": Hand transform position");
                     if(pick_upable_object.position == item.transform.position)
                     {
-                        Debug.Log("move to hand");
-                        //isHolding = true;
-                        item.GetComponent<Rigidbody>().useGravity = false;
-                        Debug.Log("Pass");
+                        item.GetComponent<Rigidbody>().isKinematic = true;
                         item.transform.SetPositionAndRotation(hand.transform.position, hand.rotation);
-                        Debug.Log("Its a hit!");
                         item.transform.parent = hand.transform;
+                        isHolding = true;
                         
                     }
                     
