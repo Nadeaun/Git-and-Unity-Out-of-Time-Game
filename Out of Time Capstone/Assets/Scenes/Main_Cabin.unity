@@ -202,7 +202,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -588.459, z: 0}
 --- !u!1001 &27612207
 PrefabInstance:
@@ -2165,9 +2165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theDestination: {fileID: 1607472683}
-  theItem: {fileID: 967993805}
   canHold: 1
-  cannotBeHeld: 0
+  cannotHold: 0
 --- !u!65 &967993807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2248,7 +2247,7 @@ Transform:
   - {fileID: 1619926892}
   - {fileID: 329447322}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 223.719, z: 0}
 --- !u!114 &977033782
 MonoBehaviour:
@@ -3198,9 +3197,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theDestination: {fileID: 1607472683}
-  theItem: {fileID: 1300324100}
   canHold: 1
-  cannotBeHeld: 0
+  cannotHold: 0
 --- !u!1001 &1312124209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11191,6 +11189,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3233675210817119357, guid: 9dc935c4977d92f49b0ab69db8a291f5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5756399373937496749, guid: 9dc935c4977d92f49b0ab69db8a291f5,
         type: 3}
       propertyPath: m_Name
