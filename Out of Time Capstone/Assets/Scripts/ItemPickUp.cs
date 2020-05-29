@@ -10,13 +10,7 @@ public class ItemPickUp : MonoBehaviour
     GameObject held_item;
     public bool isHolding = false;
     public bool lighterActive;
-    //public GameObject mainCamera;
-    /*
-    private void Start()
-    {
-        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-    }
-    */
+
     // Update is called once per frame
     void FixedUpdate()
     {

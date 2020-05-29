@@ -18,6 +18,7 @@ public class Lighter : MonoBehaviour
             handydandyitem.GetComponent<Rigidbody>().isKinematic = false;
             handydandyitem.transform.parent = null;
             left_hand.GetComponent<ItemPickUp>().isHolding = false;
+
         }
 
         if (Input.GetKeyUp(KeyCode.E))
