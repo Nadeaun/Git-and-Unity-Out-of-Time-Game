@@ -5,83 +5,71 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
 
-    public Transform hand;
-    //public Transform theDestination;
-    public GameObject theItem;
 
+    public Transform theDestination;
+    //  public GameObject theItem;
+    public bool canHold;
+    // no objects are  currently  being held so can hold object
+    public bool cannotHold;// cant hold any other objects when one object is already being held
 
-    bool holding = false;
-
-    void OnMouseDown()
+    void OnTriggerEnter(Collider col)
     {
-        if (holding == false)
+        if (col.gameObject.tag == "Pendulum")
         {
-            //GetComponent<Rigidbody>().useGravity = false;
-            //this.transform.position = hand.position;
-            //this.transform.parent = hand.transform;
-            holding = true;
+            canHold = true;
         }
-        if (holding == true)
+        else if (col.gameObject.tag == "Wind Up Key" && canHold)
         {
-            //this.transform.parent = null;
-            //GetComponent<Rigidbody>().useGravity = true;
-            holding = false;
-        }
-
-
-    }
-
-    private void Update()
-    {
-        if (holding)
-        {
-            theItem.GetComponent<Rigidbody>().useGravity = false;
-            theItem.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            theItem.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-            theItem.transform.SetParent(hand.transform);
-        }
-    }
-}
-/*
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-
-
-
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-
-            GetComponent<BoxCollider>().enabled = false;
-            GetComponent<Rigidbody>().useGravity = false;
-            GetComponent<Rigidbody>().freezeRotation = false;
-            GetComponent<Rigidbody>().detectCollisions = true;
-
-           
-            this.transform.position = theDestination.position;
-            this.transform.parent = GameObject.Find("Destination").transform;
-
-            //GetKeyDown
-        }
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            this.transform.parent = null;
-            GetComponent<Rigidbody>().useGravity = true;
-            GetComponent<Rigidbody>().detectCollisions = true;
-            GetComponent<BoxCollider>().enabled = true;
+            cannotHold = true;
 
         }
-
-        //GetKeyUp
 
 
 
     }
+        // Update is called once per frame
+        void FixedUpdate()
+        {
+
+
+            //this is a function to PICK UP OBJECT when E KEY is pressed (gravity is false)
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+
+                GetComponent<BoxCollider>().enabled = false;
+                GetComponent<Rigidbody>().useGravity = false;
+
+                GetComponent<Rigidbody>().freezeRotation = false;
+                GetComponent<Rigidbody>().detectCollisions = true;
+
+
+                this.transform.position = theDestination.position;
+                this.transform.parent = GameObject.Find("Destination").transform;
+
+                //GetKeyDown
+            }
+
+            // this is a function when OBJECT IS ALREADY BEING PICKED UP you press E KEY to drop ( gravity is set back to true)
+
+            else if (Input.GetKeyUp(KeyCode.E))
+            {
+
+                this.transform.parent = null;
+                GetComponent<Rigidbody>().useGravity = true;
+                GetComponent<Rigidbody>().detectCollisions = true;
+                GetComponent<BoxCollider>().enabled = true;
+
+            }
+
+            //GetKeyUp
+
+
+
+        }
+
+
+
+
 
     
-        
-    
-        
 }
-*/
