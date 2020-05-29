@@ -44,4 +44,10 @@ public class JournalUItoggle: MonoBehaviour
             }
         }
     }
+
+    public void EntryOneON()
+    {
+        //page1.transform.GetChild(0);
+        Debug.Log("ENABLEDS");
+    }
 }
