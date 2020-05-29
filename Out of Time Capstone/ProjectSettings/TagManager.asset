@@ -6,6 +6,8 @@ TagManager:
   tags:
   - JournalPage
   - Pendellum
+  - Pendulum
+  - Wind Up Key
   layers:
   - Default
   - TransparentFX
