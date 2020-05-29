@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour
 {
-
     
     public Transform hand;
-    public GameObject item;
+    GameObject held_item;
     public bool isHolding = false;
     public bool lighterActive;
     //public GameObject mainCamera;
@@ -28,13 +27,14 @@ public class ItemPickUp : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
-                if (Physics.Raycast(ray, out hit, 100))
+                if (Physics.Raycast(ray, out hit))
                 {
-                    var pick_upable_object = hit.transform;
-                    if(pick_upable_object.position == item.transform.position)
+                    GameObject item = hit.collider.gameObject;
+                    if (item.tag == "Item")
                     {
+                        held_item = item;
                         item.GetComponent<Rigidbody>().isKinematic = true;
                         item.transform.SetPositionAndRotation(hand.transform.position, hand.rotation);
                         item.transform.parent = hand.transform;
@@ -49,5 +49,10 @@ public class ItemPickUp : MonoBehaviour
                 }
             }
         }
+    }
+
+    void dropItem()
+    {
+        held_item.GetComponent<Rigidbody>().isKinematic = false;
     }
 }
