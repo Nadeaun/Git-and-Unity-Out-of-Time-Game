@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 317400985955127950}
   - component: {fileID: 7824589440892688842}
   - component: {fileID: 316937047859325176}
+  - component: {fileID: 9029714933532633630}
+  - component: {fileID: 4532977573999210993}
   m_Layer: 0
   m_Name: firepoker
   m_TagString: Untagged
@@ -79,6 +81,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &9029714933532633630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585636361797973818}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.59238, y: 9.17152, z: 0.90251696}
+  m_Center: {x: 0, y: 6.8858757, z: -0.16956358}
+--- !u!54 &4532977573999210993
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585636361797973818}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8049785574937606527
 GameObject:
   m_ObjectHideFlags: 0

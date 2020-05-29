@@ -7,7 +7,7 @@ public class JournalUItoggle: MonoBehaviour
     public GameObject Journal;
     public GameObject page1;
     public GameObject page2;
-    
+
     public void JournalToggle()
     {
         if (Journal != null)
@@ -20,7 +20,8 @@ public class JournalUItoggle: MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("f"))
+        // Checks to see if "f" key was pressed and if the player obtained the journal yet
+        if (Input.GetKeyDown("f") && GameObject.Find("/First Person Player/Main Camera/hand").GetComponent<ItemPickUp>().hasJournal)
         {
             JournalToggle();
         }

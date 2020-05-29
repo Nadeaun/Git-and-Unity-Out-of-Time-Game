@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1787276721110443587}
   - component: {fileID: 7320223006512634997}
   - component: {fileID: 3938997524703486092}
+  - component: {fileID: 4090804853303497151}
   m_Layer: 0
-  m_Name: Journal
-  m_TagString: Untagged
+  m_Name: JournalBook
+  m_TagString: JournalBook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4090804853303497151
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3357142622770173008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16950096, y: 0.12758881, z: 0.03403564}
+  m_Center: {x: 0.000000001738526, y: -0.028718896, z: 0.0000000026692992}

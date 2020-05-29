@@ -5,9 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - JournalPage
-  - Pendellum
-  - Pendulum
-  - Wind Up Key
+  - Item
+  - Lighter
+  - JournalBook
   layers:
   - Default
   - TransparentFX
