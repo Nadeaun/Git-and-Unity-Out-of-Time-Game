@@ -61,6 +61,7 @@ public class ItemPickUp : MonoBehaviour
         }
     }
 
+    // Puts the lighter out of view of the camera
     public void moveLighter()
     {
         // Create a vector3 to move lighter object up and down
