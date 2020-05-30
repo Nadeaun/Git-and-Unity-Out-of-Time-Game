@@ -5,18 +5,19 @@ using UnityEngine;
 public class Lighter : MonoBehaviour
 {
     bool e_pressed = false;
-    
+
     
 
     // Update is called once per frame
     void Update()
     {
+        GameObject left_hand = GameObject.Find("/First Person Player/Main Camera/hand");
+
         if (Input.GetKeyDown("e") && ! e_pressed)
         {
             // GETS THE ITEM AND DROPS IT
+            
 
-            // Gets the GameObject for the "hand" which holds the game items
-            GameObject left_hand = GameObject.Find("/First Person Player/Main Camera/hand");
             // Ensures there is an item to be dropped if not do nothing
             if (left_hand.transform.childCount > 0)
             {
@@ -35,9 +36,13 @@ public class Lighter : MonoBehaviour
 
             if (left_hand.GetComponent<ItemPickUp>().hasLighter == true)
             {
+                // Gets the Lighter game object
+                GameObject lighterObj = transform.GetChild(0).gameObject;
+
                 if (left_hand.GetComponent<ItemPickUp>().lighterActive == true)
                 {
                     left_hand.GetComponent<ItemPickUp>().moveLighter();
+                    lighterObj.transform.GetChild(0).gameObject.SetActive(false);
                 }
                 else
                 {
@@ -47,19 +52,36 @@ public class Lighter : MonoBehaviour
                     lighterPos.y = 0f;
                     lighterPos.x = 0f;
                     lighterPos.z = 0f;
-                    GameObject lighterObj = transform.GetChild(0).gameObject;
+                    
                     lighterObj.transform.localPosition = lighterPos;
                     left_hand.GetComponent<ItemPickUp>().lighterActive = true;
+                    lighterObj.transform.GetChild(0).gameObject.SetActive(true);
                 }
                 
             }
 
         }
-
-        if (Input.GetKeyUp(KeyCode.E))
+        // If lighter is active and player is left clicking, light the candle
+        if (left_hand.GetComponent<ItemPickUp>().lighterActive == true && Input.GetMouseButtonDown(0))
         {
-            Debug.Log("E is UNpressed");
-            e_pressed = false;
+            Debug.Log("Start lighting the CANLDELjlkf");
+            lightCandle();
+            Debug.Log("ENDING THE LIGHTING OF TH ECANLDE SEQUESFN");
+        }
+        
+        
+    }
+    void lightCandle()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 3))
+        {
+            GameObject candle = hit.collider.gameObject;
+            if (candle.tag == "Candle")
+            {
+                candle.transform.GetChild(0).gameObject.SetActive(true);
+            }
         }
     }
 }

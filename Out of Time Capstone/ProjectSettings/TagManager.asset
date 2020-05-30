@@ -8,6 +8,7 @@ TagManager:
   - Item
   - Lighter
   - JournalBook
+  - Candle
   layers:
   - Default
   - TransparentFX

@@ -8,7 +8,6 @@ public class ItemPickUp : MonoBehaviour
 
     public Transform hand;
     public Transform lighterHand;
-    //GameObject held_item; //seemingly redundant variable
     public bool isHolding = false;
     public bool hasLighter = false;
     public bool lighterActive = false;
@@ -21,7 +20,6 @@ public class ItemPickUp : MonoBehaviour
         if (isHolding == false || hasLighter == false || hasJournal == false)
         {
             pickUpItem();
-            
         }
     }
 
@@ -32,7 +30,7 @@ public class ItemPickUp : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, 3))
             {
                 GameObject item = hit.collider.gameObject;
                 if (item.tag == "JournalBook")
@@ -51,7 +49,6 @@ public class ItemPickUp : MonoBehaviour
                 {
                     if (item.tag == "Item")
                     {
-                        //held_item = item; //seemingly redundant variable
                         item.GetComponent<Rigidbody>().isKinematic = true;
                         item.transform.SetPositionAndRotation(hand.transform.position, hand.rotation);
                         item.transform.parent = hand.transform;
