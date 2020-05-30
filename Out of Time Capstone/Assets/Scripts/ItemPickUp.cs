@@ -20,42 +20,48 @@ public class ItemPickUp : MonoBehaviour
         // Check if player is already holding something in their hand (besides lighter)
         if (isHolding == false || hasLighter == false || hasJournal == false)
         {
+            pickUpItem();
             
-            if (Input.GetMouseButtonDown(0))
+        }
+    }
+
+
+    public void pickUpItem()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
             {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
+                GameObject item = hit.collider.gameObject;
+                if (item.tag == "JournalBook")
                 {
-                    GameObject item = hit.collider.gameObject;
-                    if (item.tag == "JournalBook")
+                    hasJournal = true;
+                    Destroy(item);
+                }
+                if (item.tag == "Lighter")
+                {
+                    item.transform.SetPositionAndRotation(lighterHand.position, lighterHand.rotation);
+                    item.transform.parent = lighterHand;
+                    hasLighter = true;
+                    lighterActive = true;
+                }
+                if (isHolding == false)
+                {
+                    if (item.tag == "Item")
                     {
-                        hasJournal = true;
-                        Destroy(item);
-                    }
-                    if (item.tag == "Lighter")
-                    {
-                        item.transform.SetPositionAndRotation(lighterHand.position, lighterHand.rotation);
-                        item.transform.parent = lighterHand;
-                        hasLighter = true;
-                        lighterActive = true;
-                    }
-                    if (isHolding == false)
-                    {
-                        if (item.tag == "Item")
-                        {
-                            //held_item = item; //seemingly redundant variable
-                            item.GetComponent<Rigidbody>().isKinematic = true;
-                            item.transform.SetPositionAndRotation(hand.transform.position, hand.rotation);
-                            item.transform.parent = hand.transform;
+                        //held_item = item; //seemingly redundant variable
+                        item.GetComponent<Rigidbody>().isKinematic = true;
+                        item.transform.SetPositionAndRotation(hand.transform.position, hand.rotation);
+                        item.transform.parent = hand.transform;
 
-                            // Set to true so that you can't pick up another item
-                            isHolding = true;
-                            // Make you put away your lighter
-                            moveLighter();
-                        }
-
+                        // Set to true so that you can't pick up another item
+                        isHolding = true;
+                        // Make you put away your lighter
+                        moveLighter();
                     }
+
                 }
             }
         }
