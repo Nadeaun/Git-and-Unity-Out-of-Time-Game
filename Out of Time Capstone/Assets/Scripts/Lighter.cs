@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Lighter : MonoBehaviour
 {
-    bool e_pressed = false;
-
+    public bool e_pressed = false;
+    
     
 
     // Update is called once per frame
@@ -16,13 +16,14 @@ public class Lighter : MonoBehaviour
         if (Input.GetKeyDown("e") && ! e_pressed)
         {
             // GETS THE ITEM AND DROPS IT
-            
+            //GameObject left_hand = GameObject.Find("/First Person Player/Main Camera/hand");
 
             // Ensures there is an item to be dropped if not do nothing
             if (left_hand.transform.childCount > 0)
             {
                 // Ensures that you can only press "e" once and not flood with "e" input constantly trying to pick something up
                 e_pressed = true;
+                Debug.Log(e_pressed + "E is pressed");
                 Debug.Log("E is pressed");
                 // Gets the GameObject of the item in the "hand" that holds the game item
                 GameObject handydandyitem = left_hand.transform.GetChild(0).gameObject;
@@ -59,23 +60,28 @@ public class Lighter : MonoBehaviour
                 }
                 
             }
-
+            e_pressed = false;
         }
+        //GameObject left_hand = GameObject.Find("/First Person Player/Main Camera/hand");
         // If lighter is active and player is left clicking, light the candle
         if (left_hand.GetComponent<ItemPickUp>().lighterActive == true && Input.GetMouseButtonDown(0))
         {
             Debug.Log("Start lighting the CANLDELjlkf");
             lightCandle();
             Debug.Log("ENDING THE LIGHTING OF TH ECANLDE SEQUESFN");
+            
         }
-        
-        
+
+        if (Input.GetKeyUp("e"))
+        {
+            Debug.Log("E is UNpressed");
+        }
     }
     void lightCandle()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 3))
+        if (Physics.Raycast(ray, out hit, 2))
         {
             GameObject candle = hit.collider.gameObject;
             if (candle.tag == "Candle")

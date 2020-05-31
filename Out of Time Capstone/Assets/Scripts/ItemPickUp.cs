@@ -42,6 +42,7 @@ public class ItemPickUp : MonoBehaviour
                 {
                     item.transform.SetPositionAndRotation(lighterHand.position, lighterHand.rotation);
                     item.transform.parent = lighterHand;
+                    item.transform.GetChild(0).gameObject.SetActive(true);
                     hasLighter = true;
                     lighterActive = true;
                 }
@@ -75,5 +76,6 @@ public class ItemPickUp : MonoBehaviour
         lighterPos.z = 0f;
         lighterObj.transform.localPosition = lighterPos;
         lighterActive = false;
+        lighterObj.transform.GetChild(0).gameObject.SetActive(false);
     }
 }
