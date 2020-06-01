@@ -246,6 +246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 397857437612992901}
+  - component: {fileID: 3261619164941433050}
   m_Layer: 0
   m_Name: GrandfatherClock
   m_TagString: Untagged
@@ -269,6 +270,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3261619164941433050
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3737460902907976598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.03, y: 36.11737, z: 13.79}
+  m_Center: {x: 0, y: 12.131549, z: 0}
 --- !u!1 &5883807708664711118
 GameObject:
   m_ObjectHideFlags: 0
