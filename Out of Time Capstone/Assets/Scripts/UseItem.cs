@@ -29,17 +29,30 @@ public class UseItem : MonoBehaviour
             // Get a ray/hit
             if (Input.GetMouseButtonDown(0))
             {
-
+                // Get the gameobject of the item hit by the ray
                 RaycastHit hit_item = getRay();
-
                 GameObject item = hit_item.transform.gameObject;
+
+                // Compare for different situations
+
+                // Check for holding firepoker and using on figurine
                 if (item.name == "BrideFigurine" && held_obj.name == "firepoker")
                 {
                     Destroy(held_obj);
                     left_hand.GetComponent<ItemPickUp>().pickItUp(item);
                     item.transform.Rotate(270, 0, 0);
+                    item.tag = "Item";
                 }
 
+                // Check for holding BrideFigurine and using on cuckoo clock
+                if (held_obj.name == "BrideFigurine" && item.name == "CuckooClock")
+                {
+                    Destroy(held_obj);
+                    item.transform.GetChild(1).gameObject.SetActive(true);
+                    // Reset the fact you aren't holding anything
+                    left_hand.GetComponent<ItemPickUp>().isHolding = false;
+                    // Finish cuckoo clock puzzle/move on to next puzzle
+                }
 
             }
         }
