@@ -33,6 +33,8 @@ public class UseItem : MonoBehaviour
                 RaycastHit hit_item = getRay();
                 GameObject target = hit_item.transform.gameObject;
 
+                Debug.Log(target.name + ": Target name");
+
                 // Compare for different situations
 
                 // Check for holding firepoker and using on figurine
@@ -74,6 +76,19 @@ public class UseItem : MonoBehaviour
                     left_hand.GetComponent<ItemPickUp>().isHolding = false;
 
                     // Finish Mantle clock puzzle/move onto next puzzle
+                }
+
+                // Check for holding wind up key and using on alarm clock
+                if (held_obj.name == "WindUpKey" && target.name == "AlarmClock")
+                {
+                    Destroy(held_obj);
+                    // Reset the fact you aren't holding anything
+                    left_hand.GetComponent<ItemPickUp>().isHolding = false;
+                    // Show wind up key in the alarm clock
+                    target.transform.GetChild(1).gameObject.SetActive(true);
+                    
+                    // Finish Game/load game over scene
+
                 }
             }
         }
