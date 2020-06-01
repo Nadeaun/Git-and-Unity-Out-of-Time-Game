@@ -48,11 +48,24 @@ public class UseItem : MonoBehaviour
                 if (held_obj.name == "BrideFigurine" && item.name == "CuckooClock")
                 {
                     Destroy(held_obj);
-                    item.transform.GetChild(1).gameObject.SetActive(true);
                     // Reset the fact you aren't holding anything
                     left_hand.GetComponent<ItemPickUp>().isHolding = false;
-                    // Finish cuckoo clock puzzle/move on to next puzzle
+                    // Show the figurine in the clock
+                    item.transform.GetChild(1).gameObject.SetActive(true);
+                    // Finish cuckoo clock puzzle/move onto next puzzle
                 }
+
+                // Check for holding pendulum and using on Grandfather clock
+                if (held_obj.name == "Pendulum" && item.name == "GrandfatherClock")
+                {
+                    Destroy(held_obj);
+                    // Reset the fact you aren't holding anything
+                    left_hand.GetComponent<ItemPickUp>().isHolding = false;
+                    // Show the pendulum in the clock
+                    item.transform.GetChild(1).gameObject.SetActive(true);
+                    // Finish Grandfather clock puzzle/move onto next puzzle
+                }
+
 
             }
         }
