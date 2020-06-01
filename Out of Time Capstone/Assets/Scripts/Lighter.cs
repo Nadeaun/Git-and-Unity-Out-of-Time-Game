@@ -68,7 +68,7 @@ public class Lighter : MonoBehaviour
         {
             Debug.Log("Start lighting the CANLDELjlkf");
             lightCandle();
-            Debug.Log("ENDING THE LIGHTING OF TH ECANLDE SEQUESFN");
+            //Debug.Log("ENDING THE LIGHTING OF TH ECANLDE SEQUESFN");
             
         }
 
