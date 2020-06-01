@@ -23,8 +23,8 @@ public class Lighter : MonoBehaviour
             {
                 // Ensures that you can only press "e" once and not flood with "e" input constantly trying to pick something up
                 e_pressed = true;
-                Debug.Log(e_pressed + "E is pressed");
-                Debug.Log("E is pressed");
+                //Debug.Log(e_pressed + "E is pressed");
+                //Debug.Log("E is pressed");
                 // Gets the GameObject of the item in the "hand" that holds the game item
                 GameObject handydandyitem = left_hand.transform.GetChild(0).gameObject;
                 // Enables physics on the item
@@ -72,10 +72,10 @@ public class Lighter : MonoBehaviour
             
         }
 
-        if (Input.GetKeyUp("e"))
-        {
-            Debug.Log("E is UNpressed");
-        }
+        //if (Input.GetKeyUp("e"))
+        //{
+        //    Debug.Log("E is UNpressed");
+        //}
     }
     void lightCandle()
     {
