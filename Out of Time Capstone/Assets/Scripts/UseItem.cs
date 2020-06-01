@@ -31,42 +31,50 @@ public class UseItem : MonoBehaviour
             {
                 // Get the gameobject of the item hit by the ray
                 RaycastHit hit_item = getRay();
-                GameObject item = hit_item.transform.gameObject;
+                GameObject target = hit_item.transform.gameObject;
 
                 // Compare for different situations
 
                 // Check for holding firepoker and using on figurine
-                if (item.name == "BrideFigurine" && held_obj.name == "firepoker")
+                if (target.name == "BrideFigurine" && held_obj.name == "firepoker")
                 {
                     Destroy(held_obj);
-                    left_hand.GetComponent<ItemPickUp>().pickItUp(item);
-                    item.transform.Rotate(270, 0, 0);
-                    item.tag = "Item";
+                    left_hand.GetComponent<ItemPickUp>().pickItUp(target);
+                    target.transform.Rotate(270, 0, 0);
+                    target.tag = "Item";
                 }
 
                 // Check for holding BrideFigurine and using on cuckoo clock
-                if (held_obj.name == "BrideFigurine" && item.name == "CuckooClock")
+                if (held_obj.name == "BrideFigurine" && target.name == "CuckooClock")
                 {
                     Destroy(held_obj);
                     // Reset the fact you aren't holding anything
                     left_hand.GetComponent<ItemPickUp>().isHolding = false;
                     // Show the figurine in the clock
-                    item.transform.GetChild(1).gameObject.SetActive(true);
+                    target.transform.GetChild(1).gameObject.SetActive(true);
                     // Finish cuckoo clock puzzle/move onto next puzzle
                 }
 
                 // Check for holding pendulum and using on Grandfather clock
-                if (held_obj.name == "Pendulum" && item.name == "GrandfatherClock")
+                if (held_obj.name == "Pendulum" && target.name == "GrandfatherClock")
                 {
                     Destroy(held_obj);
                     // Reset the fact you aren't holding anything
                     left_hand.GetComponent<ItemPickUp>().isHolding = false;
                     // Show the pendulum in the clock
-                    item.transform.GetChild(1).gameObject.SetActive(true);
+                    target.transform.GetChild(1).gameObject.SetActive(true);
                     // Finish Grandfather clock puzzle/move onto next puzzle
                 }
 
+                // Check for holding gear and using on Mantleclock
+                if (held_obj.name == "gear" && target.name == "Mantle_Clock")
+                {
+                    Destroy(held_obj);
+                    // Reset the fact you aren't holding anything
+                    left_hand.GetComponent<ItemPickUp>().isHolding = false;
 
+                    // Finish Mantle clock puzzle/move onto next puzzle
+                }
             }
         }
     }

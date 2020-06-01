@@ -6330,7 +6330,7 @@ PrefabInstance:
     - target: {fileID: 7737102140971263176, guid: 300bd3021f0efaa4d86e47872825ed86,
         type: 3}
       propertyPath: m_Name
-      value: Mantel_Clock
+      value: Mantle_Clock
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 300bd3021f0efaa4d86e47872825ed86, type: 3}
