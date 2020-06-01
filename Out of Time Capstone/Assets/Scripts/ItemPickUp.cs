@@ -28,6 +28,7 @@ public class ItemPickUp : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("Pew");
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 3))
@@ -50,12 +51,7 @@ public class ItemPickUp : MonoBehaviour
                 {
                     if (item.tag == "Item")
                     {
-                        item.GetComponent<Rigidbody>().isKinematic = true;
-                        item.transform.SetPositionAndRotation(hand.transform.position, hand.rotation);
-                        item.transform.parent = hand.transform;
-
-                        // Set to true so that you can't pick up another item
-                        isHolding = true;
+                        pickItUp(item);
                         // Make you put away your lighter
                         moveLighter();
                     }
@@ -63,6 +59,16 @@ public class ItemPickUp : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void pickItUp(GameObject item)
+    {
+        item.GetComponent<Rigidbody>().isKinematic = true;
+        item.transform.SetPositionAndRotation(hand.transform.position, hand.rotation);
+        item.transform.parent = hand.transform;
+
+        // Set to true so that you can't pick up another item
+        isHolding = true;
     }
 
     // Puts the lighter out of view of the camera
