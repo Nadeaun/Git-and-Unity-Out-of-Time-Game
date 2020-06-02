@@ -5,21 +5,21 @@ using UnityEngine;
 public class UseItem : MonoBehaviour
 {
 
-    //GameObject left_hand;
+    GameObject left_hand;
     //GameObject held_obj;
     
     private void Start()
     {
         Debug.Log("Start the start of the UseItem start");
-        
-        
+
+        left_hand = GameObject.Find("/First Person Player/Main Camera/hand").gameObject;
         Debug.Log("UseItem Start fxn pass");
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameObject left_hand = GameObject.Find("/First Person Player/Main Camera/hand").gameObject;
+//        GameObject left_hand = GameObject.Find("/First Person Player/Main Camera/hand").gameObject;
         bool hasItem = left_hand.GetComponent<ItemPickUp>().isHolding;
         
         // Check if you are holding an item

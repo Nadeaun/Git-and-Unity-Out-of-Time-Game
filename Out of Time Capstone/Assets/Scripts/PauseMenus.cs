@@ -30,14 +30,16 @@ public class PauseMenus : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
+        GameObject.Find("/First Person Player/Main Camera").GetComponent<MouseLook>().mouseLookOn = true;
         Cursor.visible = false;
     }
 
     void Pause()
     {
         pauseMenusUI.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         GameIsPaused = true;
+        GameObject.Find("/First Person Player/Main Camera").GetComponent<MouseLook>().mouseLookOn = false;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }
