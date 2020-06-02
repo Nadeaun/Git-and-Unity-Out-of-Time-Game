@@ -3642,6 +3642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f757a97aaaa6eb447850a18d4e20e119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questNumber: 0
 --- !u!1001 &992517942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4923,6 +4924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7accf8447bed928459063d01f4752306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlocked: 0
 --- !u!65 &1197003464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5915,7 +5917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1423585306
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12345,6 +12347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 100
   playerBody: {fileID: 977033781}
+  mouseLookOn: 1
 --- !u!1001 &1658252604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17976,7 +17979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1936396073
 RectTransform:
   m_ObjectHideFlags: 0

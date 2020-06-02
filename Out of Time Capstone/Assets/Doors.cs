@@ -6,18 +6,19 @@ public class Doors : MonoBehaviour
 {
     Animator animator;
     bool doorOpen;
+    public bool unlocked;
 
     void Start()
     {
         doorOpen = false;
         animator = GetComponent<Animator>();
-
+        unlocked = false;
        
     }
 
     void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.tag=="Player")
+        if(col.gameObject.tag=="Player" && unlocked)
         {
             doorOpen = true;
             DoorControl("Open");
