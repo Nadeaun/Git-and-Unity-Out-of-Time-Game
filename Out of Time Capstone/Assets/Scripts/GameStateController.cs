@@ -7,7 +7,9 @@ public class GameStateController : MonoBehaviour
 {
     public int questNumber = 0;
     GameObject journal;
-    
+    public int candles_lit = 0;
+    bool play_once = false;
+
     public bool finishedQuest0;
     public bool finishedQuest1;
     public bool finishedQuest2;
@@ -165,12 +167,15 @@ public class GameStateController : MonoBehaviour
         journal.transform.GetChild(1).transform.GetChild(1).gameObject.SetActive(true);
 
 
-
+        
         // Enable wind up key if all candles are lit
-        if (candles_lit = 10)
+        if (candles_lit == 13 && ! play_once)
         {
-            GameObject.Find("/WindUpKey").SetActive(true);
+            Debug.Log("WindUpKey is ALLLIIIIIVE");
+            GameObject.Find("WindUpKeyHolder").gameObject.transform.GetChild(0).gameObject.SetActive(true);
             // Play glug noise
+
+            play_once = true;
         }
 
 
