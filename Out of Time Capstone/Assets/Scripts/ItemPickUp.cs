@@ -49,7 +49,7 @@ public class ItemPickUp : MonoBehaviour
                 }
                 if (isHolding == false)
                 {
-                    if (item.tag == "Item")
+                    if (item.tag == "Item" && item.GetComponent<permission>().allowed)
                     {
                         pickItUp(item);
                         // Make you put away your lighter

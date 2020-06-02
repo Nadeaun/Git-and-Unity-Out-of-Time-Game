@@ -33,12 +33,12 @@ public class UseItem : MonoBehaviour
                 RaycastHit hit_item = getRay();
                 GameObject target = hit_item.transform.gameObject;
 
-                Debug.Log(target.name + ": Target name");
+                Debug.Log(target.name + ": Target name"); //DEBUG
 
                 // Compare for different situations
 
                 // Check for holding firepoker and using on figurine
-                if (target.name == "BrideFigurine" && held_obj.name == "firepoker")
+                if (held_obj.name == "firepoker" && target.name == "BrideFigurine")
                 {
                     Destroy(held_obj);
                     left_hand.GetComponent<ItemPickUp>().pickItUp(target);
@@ -55,6 +55,7 @@ public class UseItem : MonoBehaviour
                     // Show the figurine in the clock
                     target.transform.GetChild(1).gameObject.SetActive(true);
                     // Finish cuckoo clock puzzle/move onto next puzzle
+                    GameObject.Find("/First Person Player").GetComponent<GameStateController>().cooClock_fixed = true;
                 }
 
                 // Check for holding pendulum and using on Grandfather clock
@@ -66,6 +67,7 @@ public class UseItem : MonoBehaviour
                     // Show the pendulum in the clock
                     target.transform.GetChild(1).gameObject.SetActive(true);
                     // Finish Grandfather clock puzzle/move onto next puzzle
+                    GameObject.Find("/First Person Player").GetComponent<GameStateController>().gfClock_fixed = true;
                 }
 
                 // Check for holding gear and using on Mantleclock
@@ -76,6 +78,7 @@ public class UseItem : MonoBehaviour
                     left_hand.GetComponent<ItemPickUp>().isHolding = false;
 
                     // Finish Mantle clock puzzle/move onto next puzzle
+                    GameObject.Find("/First Person Player").GetComponent<GameStateController>().manClock_fixed = true;
                 }
 
                 // Check for holding wind up key and using on alarm clock
@@ -86,9 +89,9 @@ public class UseItem : MonoBehaviour
                     left_hand.GetComponent<ItemPickUp>().isHolding = false;
                     // Show wind up key in the alarm clock
                     target.transform.GetChild(1).gameObject.SetActive(true);
-                    
-                    // Finish Game/load game over scene
 
+                    // Finish Game/load game over scene
+                    GameObject.Find("/First Person Player").GetComponent<GameStateController>().alClock_fixed = true;
                 }
             }
         }
