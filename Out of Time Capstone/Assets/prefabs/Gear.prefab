@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 882348968949846175}
   - component: {fileID: 570318731}
   m_Layer: 0
-  m_Name: gear
+  m_Name: Gear
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1567818261435876064, guid: 063620142d8558e458b339f91aae618a, type: 3}
+  - {fileID: 2100000, guid: a863491a3c828794b8d5bdc68af2d441, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
