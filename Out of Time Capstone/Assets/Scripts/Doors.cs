@@ -22,7 +22,7 @@ public class Doors : MonoBehaviour
         {
             doorOpen = true;
             DoorControl("Open");
-
+            GetComponentInChildren<AudioSource>().Play(0);
         }
     }
 
@@ -32,6 +32,7 @@ public class Doors : MonoBehaviour
         {
             doorOpen = false;
             DoorControl("Close");
+            GetComponentInChildren<AudioSource>().Play(0);
         }
     }
 

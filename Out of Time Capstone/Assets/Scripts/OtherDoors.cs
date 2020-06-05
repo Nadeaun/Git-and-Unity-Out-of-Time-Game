@@ -12,7 +12,7 @@ public class OtherDoors : MonoBehaviour
     {
         doorOpen = false;
         animator = GetComponent<Animator>();
-   
+        
 
     }
 
@@ -22,7 +22,7 @@ public class OtherDoors : MonoBehaviour
         {
             doorOpen = true;
             DoorControl("Open");
-
+            GetComponentInChildren<AudioSource>().Play(0);
         }
     }
 
@@ -32,6 +32,7 @@ public class OtherDoors : MonoBehaviour
         {
             doorOpen = false;
             DoorControl("Close");
+            GetComponentInChildren<AudioSource>().Play(0);
         }
     }
 
