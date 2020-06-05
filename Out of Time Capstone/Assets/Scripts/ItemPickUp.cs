@@ -46,6 +46,7 @@ public class ItemPickUp : MonoBehaviour
                     item.transform.GetChild(0).gameObject.SetActive(true);
                     hasLighter = true;
                     lighterActive = true;
+                    //GameObject.Find("/Lighter/Particle System").gameObject.SetActive(true);
                 }
                 if (isHolding == false)
                 {
