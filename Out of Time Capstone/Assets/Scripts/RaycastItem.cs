@@ -14,7 +14,7 @@ public class RaycastItem: MonoBehaviour
     {
         RaycastHit Hit;
 
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Hit))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Hit, 3))
         {
             ToTarget = Hit.distance;
             DistanceFromTarget = ToTarget;
