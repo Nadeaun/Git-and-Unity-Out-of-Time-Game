@@ -5211,7 +5211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -130}
+  m_AnchoredPosition: {x: 0, y: -62.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &199596417
@@ -8108,7 +8108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theDistance: 0
-  pickUpItemText: {fileID: 0}
+  pickUpItemText: {fileID: 194167323}
 --- !u!1001 &343169139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18442,26 +18442,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 52419347}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &706487439 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1356920459704999082, guid: 05e5e2f2b63e4e04084c71ffe70d5cb8,
-    type: 3}
-  m_PrefabInstance: {fileID: 306855051}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &706487443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706487439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c34c57153e76f2488133a6d2d6b1b6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theDistance: 0
-  pickUpItemText: {fileID: 194167323}
 --- !u!1001 &707469844
 PrefabInstance:
   m_ObjectHideFlags: 0
