@@ -9,6 +9,7 @@ TagManager:
   - Lighter
   - JournalBook
   - Candle
+  - Door
   layers:
   - Default
   - TransparentFX

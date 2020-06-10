@@ -14213,7 +14213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &526233731
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29233,7 +29233,7 @@ GameObject:
   - component: {fileID: 1131811835}
   m_Layer: 0
   m_Name: BasementDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29262,9 +29262,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1131811833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f05fa19aea69f947bf947ff44a2597c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6736f1a2ad5ab2740a868594ef8686c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlocked: 1
 --- !u!95 &1131811836
 Animator:
   serializedVersion: 3
@@ -29295,8 +29296,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.35106924, y: 1.35, z: 0.8817436}
-  m_Center: {x: -0.12876323, y: -0.029999986, z: -0.23959912}
+  m_Size: {x: 0.28676575, y: 0.5217068, z: 0.09540035}
+  m_Center: {x: -0.13142799, y: 0.06016611, z: -0.03540173}
 --- !u!1001 &1132437495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31271,7 +31272,7 @@ GameObject:
   - component: {fileID: 1197003463}
   m_Layer: 0
   m_Name: bedroomDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31308,7 +31309,7 @@ Transform:
   m_Children:
   - {fileID: 1813722286}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1197003463
 MonoBehaviour:
@@ -31319,7 +31320,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1197003460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7accf8447bed928459063d01f4752306, type: 3}
+  m_Script: {fileID: 11500000, guid: 6736f1a2ad5ab2740a868594ef8686c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: 0
@@ -31334,8 +31335,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.71866524, y: 0.62, z: 0.77}
-  m_Center: {x: -0.23380296, y: 0, z: -3.487349e-16}
+  m_Size: {x: 0.27489534, y: 0.50894433, z: 0.09498015}
+  m_Center: {x: -0.12425616, y: 0.064949624, z: -0.0006696843}
 --- !u!1001 &1198108518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38156,7 +38157,7 @@ GameObject:
   - component: {fileID: 1443255067}
   m_Layer: 0
   m_Name: Study Door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38170,9 +38171,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1443255066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f05fa19aea69f947bf947ff44a2597c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6736f1a2ad5ab2740a868594ef8686c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlocked: 1
 --- !u!95 &1443255068
 Animator:
   serializedVersion: 3
@@ -38203,8 +38205,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.50953645, y: 1.35, z: 0.6684427}
-  m_Center: {x: -0.20799659, y: -0.029999986, z: -0.13294873}
+  m_Size: {x: 0.26213133, y: 0.53245854, z: 0.09035284}
+  m_Center: {x: -0.12802212, y: 0.055573788, z: -0.03989028}
 --- !u!4 &1443255070
 Transform:
   m_ObjectHideFlags: 0
@@ -38218,7 +38220,7 @@ Transform:
   m_Children:
   - {fileID: 862102233}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &1446547192 stripped
 Transform:
@@ -53054,6 +53056,7 @@ GameObject:
   - component: {fileID: 1619926891}
   - component: {fileID: 1619926890}
   - component: {fileID: 1619926893}
+  - component: {fileID: 1619926894}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -53145,6 +53148,18 @@ MonoBehaviour:
   mouseSensitivity: 100
   playerBody: {fileID: 977033781}
   mouseLookOn: 1
+--- !u!114 &1619926894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619926889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76901bd3e96df274f9e03f05f8f522bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1621802971 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6791803104530045260, guid: a5db4b71e3c79734da51f3d2d8371e9d,

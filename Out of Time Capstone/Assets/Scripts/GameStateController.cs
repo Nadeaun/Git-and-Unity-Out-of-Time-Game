@@ -118,8 +118,8 @@ public class GameStateController : MonoBehaviour
         if (finishedQuest0)
         {
             // Unlock master door
-            GameObject.Find("/bedroomDoor").gameObject.GetComponent<Doors>().unlocked = true;
-
+            //GameObject.Find("/bedroomDoor").gameObject.GetComponent<Doors>().unlocked = true;
+            GameObject.Find("/bedroomDoor").gameObject.GetComponent<DoorProperties>().unlocked = true;
             // move onto next quest
             questNumber += 1;
             play_uno = false;
