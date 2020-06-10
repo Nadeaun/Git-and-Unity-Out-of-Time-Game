@@ -37431,7 +37431,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Entry 1 - \n\nFind the Pendulum to fix the clock in the study.
+  m_text: 'Entry 1 - \n\nAll my time is spent in the study trying to figure out why
+    she left. The grandfather clock''s hourly gong is driving me mad, I can''t hear
+    myself think. Every hourly gong it makes is another hour since they left. I can''t
+    take it anymore. \nOBJECTIVE: Find the pendulum and return it back to the grandfather
+    clock.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -52813,7 +52817,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Entry 3 - \n\nFind the Figurine to fix the clock in the basement.
+  m_text: 'Entry 3 - \n\nI brought the cuckoo clock to the basement. I couldn''t
+    stand to look at it anymore. It was a wedding gift from my mother with handmade
+    figurines of me and my wife. But even in the basement, the ticking continued
+    so I broke one of the figures off to make it stop. I just wanted it to stop.
+    The memory of her and our family are all up in smoke now.\nOBJECTIVE: Find the
+    Wedding Figure and return it to the cuckoo clock.\n\n<- Left Click'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -65948,7 +65957,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Entry 2 - \n\nFind the Gear to fix the clock on the fireplace.
+  m_text: "Entry 2 - \\n\\nWithout my family, our home that was once filled with
+    my loved one's voices are now just filled with the sounds of clocks. I hate the
+    mantle clock. It mocks our family room with it's ticking. I will make it stop.
+    \\nOBJECTIVE: Find the gear missing from the mantle clock and return it.\\n\\n\t\t\tRight
+    Click ->"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -70215,7 +70228,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Entry 4 - \n\nFind the wind up key to fix the clock in the bedroom.
+  m_text: 'Entry 4 - \n\nEverything is silent now. The only noise is the alarm clock
+    ringing and ticking when I awaken. All these lights give me a headache too...I''m
+    tired of waking up. I''m tired of these lights, this noise. No more. \nOBJECTIVE:
+    Find the wind up key for the alarm clock and return it.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
